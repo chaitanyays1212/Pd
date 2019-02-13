@@ -1,0 +1,676 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.14-s077_1, built Fri May 4 09:53:52 PDT 2018
+Options:	
+Date:		Wed Feb 13 03:37:25 2019
+Host:		compute-srv2.eda.atme.in (x86_64 w/Linux 3.10.0-1160.49.1.el7.x86_64) (8cores*64cpus*Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz 20480KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	17.1	Denied
+		invsb	Innovus Implementation System Basic	17.1	checkout succeeded
+		4 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (1031 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 16.12-s208 fill procedures
+<CMD> win
+<CMD> setDesignMode -process 45
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+Updating process node dependent CCOpt properties for the 45nm process node.
+<CMD> set init_verilog /home/vv2trainee7/Hierarchical/work/allV/genus/outputs_Hier/a23_core_m.v
+<CMD> set init_mmmc_file /home/vv2trainee7/Hierarchical/work/allV/Hie.view
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_lef_file {/home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/gsclib045_tech.lef /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/gsclib045_macro.lef /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/gsclib045_lvt_macro.lef /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/copro.lef /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/decode.lef /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/exec.lef /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/fetch.lef }
+<CMD> setGenerateViaMode -auto true
+<CMD> init_design
+#% Begin Load MMMC data ... (date=02/13 03:37:59, mem=474.1M)
+#% End Load MMMC data ... (date=02/13 03:37:59, total cpu=0:00:00.0, real=0:00:00.0, peak res=474.2M, current mem=474.2M)
+min_rc max_rc
+
+Loading LEF file /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/gsclib045_tech.lef ...
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PO', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_DIFF', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PSUB', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NWELL', 
+
+Loading LEF file /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/gsclib045_macro.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/gsclib045_lvt_macro.lef ...
+
+Loading LEF file /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/copro.lef ...
+
+Loading LEF file /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/decode.lef ...
+
+Loading LEF file /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/exec.lef ...
+
+Loading LEF file /home/vv2trainee6/Desktop/HarshithG/Physical_design/AMBER/Design_Requirements/libvt/hierarchical/lef/fetch.lef ...
+**ERROR: (IMPLF-82):	The x coordinate value 2.2520
+in pin 'VDD' in macro 'a23_fetch' is not on Manufacturing Grid.
+This is likely to result in placement/routing that cannot be manufactured. Check the manufacturing grid defined in the technology LEF file (MANUFACTURINGGRID) and make sure the value is an integral multiple of the grid.
+**ERROR: (IMPLF-82):	The x coordinate value 2.2520
+in pin 'VSS' in macro 'a23_fetch' is not on Manufacturing Grid.
+This is likely to result in placement/routing that cannot be manufactured. Check the manufacturing grid defined in the technology LEF file (MANUFACTURINGGRID) and make sure the value is an integral multiple of the grid.
+**ERROR: (IMPLF-82):	The x coordinate value 2.5020
+in OBS in macro 'a23_fetch' is not on Manufacturing Grid.
+This is likely to result in placement/routing that cannot be manufactured. Check the manufacturing grid defined in the technology LEF file (MANUFACTURINGGRID) and make sure the value is an integral multiple of the grid.
+**ERROR: (IMPLF-82):	The x coordinate value 2.5020
+in OBS in macro 'a23_fetch' is not on Manufacturing Grid.
+This is likely to result in placement/routing that cannot be manufactured. Check the manufacturing grid defined in the technology LEF file (MANUFACTURINGGRID) and make sure the value is an integral multiple of the grid.
+**WARN: (IMPLF-200):	Pin 'i_clk' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[31]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[30]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[29]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[28]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[27]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[26]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[25]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[24]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[23]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[22]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[21]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[20]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[19]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[18]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[17]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[16]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[15]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[14]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'i_address[13]' in macro 'a23_fetch' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-201):	Pin 'o_read_data[31]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[30]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[29]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[28]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[27]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[26]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[25]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[24]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[23]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[22]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[21]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[20]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[19]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[18]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[17]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[16]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[15]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[14]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[13]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'o_read_data[12]' in macro 'a23_fetch' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+viaInitial starts at Wed Feb 13 03:37:59 2019
+viaInitial ends at Wed Feb 13 03:37:59 2019
+Loading view definition file from /home/vv2trainee7/Hierarchical/work/allV/Hie.view
+Reading min_lib timing library '/home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX4LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX4LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHXLLVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHXLLVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX1LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX1LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX2LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX2LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX4LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX4LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFXLLVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFXLLVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX1LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDHX1LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX2LVT' is not defined in the library. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fastv0lvt.lib)
+Read 480 cells in library 'fast_vdd1v0' 
+Reading min_lib timing library '/home/vv2trainee7/Hierarchical/lib/fast.lib' ...
+**WARN: (TECHLIB-459):	Appending library 'fast_vdd1v0' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/fast.lib)
+Read 489 cells in library 'fast_vdd1v0' 
+Reading min_lib timing library '/home/vv2trainee7/Hierarchical/lib/exec_fast.lib' ...
+Read 1 cells in library 'a23_execute' 
+Reading min_lib timing library '/home/vv2trainee7/Hierarchical/lib/fetch_fast.lib' ...
+Read 1 cells in library 'a23_fetch' 
+Reading min_lib timing library '/home/vv2trainee7/Hierarchical/lib/copro_fast.lib' ...
+Read 1 cells in library 'a23_coprocessor' 
+Reading min_lib timing library '/home/vv2trainee7/Hierarchical/lib/decode_fast.lib' ...
+Read 1 cells in library 'a23_decode' 
+Reading max_lib timing library '/home/vv2trainee7/Hierarchical/lib/slowv0lvt.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/slowv0lvt.lib)
+Read 480 cells in library 'slow_vdd1v0' 
+Reading max_lib timing library '/home/vv2trainee7/Hierarchical/lib/slow.lib' ...
+**WARN: (TECHLIB-459):	Appending library 'slow_vdd1v0' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/vv2trainee7/Hierarchical/lib/slow.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/slow.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/slow.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/slow.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/slow.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/slow.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/slow.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/vv2trainee7/Hierarchical/lib/slow.lib)
+Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 489 cells in library 'slow_vdd1v0' 
+Reading max_lib timing library '/home/vv2trainee7/Hierarchical/lib/decode_slow.lib' ...
+Read 1 cells in library 'a23_decode' 
+Reading max_lib timing library '/home/vv2trainee7/Hierarchical/lib/exec_slow.lib' ...
+Read 1 cells in library 'a23_execute' 
+Reading max_lib timing library '/home/vv2trainee7/Hierarchical/lib/fetch_slow.lib' ...
+Read 1 cells in library 'a23_fetch' 
+Reading max_lib timing library '/home/vv2trainee7/Hierarchical/lib/copro_slow.lib' ...
+Read 1 cells in library 'a23_coprocessor' 
+*** End library_loading (cpu=0.22min, real=0.23min, mem=63.7M, fe_cpu=0.50min, fe_real=0.80min, fe_mem=635.4M) ***
+#% Begin Load netlist data ... (date=02/13 03:38:13, mem=1303.6M)
+*** Begin netlist parsing (mem=635.4M) ***
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'a23_execute' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'a23_execute' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'a23_fetch' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'a23_fetch' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'a23_coprocessor' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'a23_coprocessor' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'a23_decode' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'a23_decode' is defined in LEF but not in the timing library.
+Created 973 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/home/vv2trainee7/Hierarchical/work/allV/genus/outputs_Hier/a23_core_m.v'
+
+*** Memory Usage v#1 (Current mem = 635.359M, initial mem = 228.730M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:01.0, mem=635.4M) ***
+#% End Load netlist data ... (date=02/13 03:38:14, total cpu=0:00:00.1, real=0:00:01.0, peak res=1303.6M, current mem=551.4M)
+Top level cell is a23_core.
+Hooked 1946 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell a23_core ...
+*** Netlist is unique.
+** info: there are 2048 modules.
+** info: there are 42 stdCell insts.
+** info: there are 4 macros.
+
+*** Memory Usage v#1 (Current mem = 713.035M, initial mem = 228.730M) ***
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '/home/vv2trainee7/Hierarchical/work/allV/genus/outputs_Hier/a23_core_m.sdc' ...
+Current (total cpu=0:00:32.5, real=0:00:51.0, peak res=1303.6M, current mem=778.1M)
+**WARN: (TCLCMD-1457):	Skipped unsupported command: set_units (File /home/vv2trainee7/Hierarchical/work/allV/genus/outputs_Hier/a23_core_m.sdc, Line 9).
+
+**WARN: (TCLCMD-1457):	Skipped unsupported command: set_units (File /home/vv2trainee7/Hierarchical/work/allV/genus/outputs_Hier/a23_core_m.sdc, Line 10).
+
+a23_core
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX8LVT in any library for view worst.
+**WARN: (EMS-27):	Message (IMPCTE-290) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+INFO (CTE): Reading of timing constraints file /home/vv2trainee7/Hierarchical/work/allV/genus/outputs_Hier/a23_core_m.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=794.9M, current mem=794.9M)
+Current (total cpu=0:00:32.6, real=0:00:51.0, peak res=1303.6M, current mem=794.9M)
+Total number of combinational cells: 645
+Total number of sequential cells: 304
+Total number of tristate cells: 20
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2LVT BUFX12LVT CLKBUFX2LVT BUFX3LVT BUFX4LVT BUFX6LVT BUFX8LVT CLKBUFX12LVT CLKBUFX3LVT CLKBUFX4LVT CLKBUFX6LVT CLKBUFX8LVT BUFX2 BUFX12 BUFX16 CLKBUFX2 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 26
+List of unusable buffers: BUFX16LVT BUFX20LVT CLKBUFX16LVT CLKBUFX20LVT BUFX20 CLKBUFX20
+Total number of unusable buffers: 6
+List of usable inverters: CLKINVX1LVT CLKINVX2LVT CLKINVX12LVT CLKINVX4LVT CLKINVX3LVT CLKINVX6LVT CLKINVX8LVT INVX1LVT INVX2LVT INVX12LVT INVX3LVT INVX4LVT INVX6LVT INVX8LVT CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX4 CLKINVX3 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVXL INVX3 INVX4 INVX6 INVX8
+Total number of usable inverters: 31
+List of unusable inverters: CLKINVX16LVT CLKINVX20LVT INVX16LVT INVX20LVT INVXLLVT CLKINVX20 INVX20
+Total number of unusable inverters: 7
+List of identified usable delay cells: DLY1X1LVT DLY1X4LVT DLY2X1LVT DLY2X4LVT DLY3X1LVT DLY3X4LVT DLY4X1LVT DLY4X4LVT DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 16
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Start generating vias ...
+Generating vias for default rule ...
+Total 25 vias inserted to default rule.
+Via generation for default rule completed.
+Generating vias for nondefault rule LEFSpecialRouteSpec ...
+Total 102 vias added to nondefault rule LEFSpecialRouteSpec
+Via generation for nondefault rule LEFSpecialRouteSpec completed.
+Generating vias for nondefault rule VLMDefaultSetup ...
+Total 102 vias added to nondefault rule VLMDefaultSetup
+Via generation for nondefault rule VLMDefaultSetup completed.
+Via generation completed successfully.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Importing multi-corner technology file(s) for preRoute extraction...
+/home/vv2trainee7/Hierarchical/lib/gpdk045.tch
+Completed (cpu: 0:00:07.2 real: 0:00:09.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: worst
+    RC-Corner Name        : min_rc
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '/home/vv2trainee7/Hierarchical/lib/gpdk045.tch'
+ 
+ Analysis View: best
+    RC-Corner Name        : max_rc
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '/home/vv2trainee7/Hierarchical/lib/gpdk045.tch'
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-155            6  ViaRule only supports routing/cut layer,...
+WARNING   IMPLF-200          535  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201          609  Pin '%s' in macro '%s' has no ANTENNADIF...
+ERROR     IMPLF-82             4  %s is not on Manufacturing Grid. This is...
+WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+WARNING   IMPVL-159            8  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   IMPCTE-290         140  Could not locate cell %s in any library ...
+WARNING   TCLCMD-1457          2  Skipped unsupported command: %s          
+WARNING   TECHLIB-302         20  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+WARNING   TECHLIB-459          2  Appending library '%s' to the previously...
+*** Message Summary: 1344 warning(s), 4 error(s)
+
+<CMD> checkDesign -netlist
+############################################################################
+# Innovus Netlist Design Rule Check
+# Wed Feb 13 03:38:50 2019
+
+############################################################################
+Design: a23_core
+
+------ Design Summary:
+Total Standard Cell Number   (cells) : 42
+Total Block Cell Number      (cells) : 4
+Total I/O Pad Cell Number    (cells) : 0
+Total Standard Cell Area     ( um^2) : 100.21
+Total Block Cell Area        ( um^2) : 59055.93
+Total I/O Pad Cell Area      ( um^2) : 0.00
+
+------ Design Statistics:
+
+Number of Instances            : 46
+Number of Non-uniquified Insts : 40
+Number of Nets                 : 730
+Average number of Pins per Net : 1.92
+Maximum number of Pins in Net  : 42
+
+------ I/O Port summary
+
+Number of Primary I/O Ports    : 107
+Number of Input Ports          : 36
+Number of Output Ports         : 71
+Number of Bidirectional Ports  : 0
+Number of Power/Ground Ports   : 0
+Number of Floating Ports                     *: 0
+Number of Ports Connected to Multiple Pads   *: 0
+Number of Ports Connected to Core Instances   : 107
+**WARN: (IMPREPO-202):	There are 107 Ports connected to core instances.
+
+------ Design Rule Checking:
+
+Number of Output Pins connect to Power/Ground *: 0
+Number of Insts with Input Pins tied together ?: 0
+Number of TieHi/Lo term nets not connected to instance's PG terms ?: 0
+**WARN: (IMPDB-2136):	Input term 'i_address[0]' of  instance 'u_fetch' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_address[1]' of  instance 'u_fetch' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_dabt' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_iabt' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_abt_status[0]' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_abt_status[1]' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_abt_status[2]' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_abt_status[3]' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_abt_status[4]' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_abt_status[5]' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_abt_status[6]' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+**WARN: (IMPDB-2136):	Input term 'i_abt_status[7]' of  instance 'u_decode' does not connect to a 'TieLo ' net. The netlist is not correct or the net for connecting tie high/low signals is not specified. To resolve this problem, check your netlist or run globalNetConnect to specify the tie high/low signal nets.
+Number of Input/InOut Floating Pins            : 12
+Number of Output Floating Pins                 : 0
+Number of Output Term Marked TieHi/Lo         *: 0
+
+**WARN: (IMPREPO-218):	There are 12 Floating Instance terminals.
+Number of nets with tri-state drivers          : 0
+Number of nets with parallel drivers           : 0
+Number of nets with multiple drivers           : 0
+Number of nets with no driver (No FanIn)       : 17
+Number of Output Floating nets (No FanOut)     : 88
+Number of High Fanout nets (>50)               : 0
+**WARN: (IMPDB-2139):	Input netlist has a cell a23_coprocessor which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change.
+**WARN: (IMPDB-2139):	Input netlist has a cell a23_decode which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change.
+**WARN: (IMPDB-2139):	Input netlist has a cell a23_execute which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change.
+**WARN: (IMPDB-2139):	Input netlist has a cell a23_fetch which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change.
+
+# Number of cells of input netlist marked dont_use = 4.
+
+Design check done.
+Report saved in file checkDesign/a23_core.main.htm.ascii.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDB-2139           4  Input netlist has a cell %s which is mar...
+WARNING   IMPDB-2136          12  %s term '%s' of %s instance '%s' does no...
+WARNING   IMPREPO-202          1  There are %d Ports connected to core ins...
+WARNING   IMPREPO-218          1  There are %d Floating Instance terminals...
+*** Message Summary: 18 warning(s), 0 error(s)
+
+<CMD> check_timing
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: a23_core
+# Design Mode: 45nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (1 T). (MEM=1173.73)
+AAE DB initialization (MEM=1189.86 CPU=0:00:00.1 REAL=0:00:00.0) 
+Total number of fetched objects 1167
+End delay calculation. (MEM=1643.52 CPU=0:00:04.3 REAL=0:00:04.0)
+End delay calculation (fullDC). (MEM=1355.41 CPU=0:00:05.1 REAL=0:00:06.0)
+     +-----------------------------------------------------------+ 
+     |                   TIMING CHECK SUMMARY                    | 
+     |-----------------------------------------------------------| 
+     |       Warning        |   Warning Description   |  Number  | 
+     |                      |                         |    of    | 
+     |                      |                         | Warnings | 
+     |----------------------+-------------------------+----------| 
+     | ideal_clock_waveform | Clock waveform is ideal |        1 | 
+     | no_drive             | No drive assertion      |        1 | 
+     +-----------------------------------------------------------+ 
+<CMD> check_timing -type endpoints
+     +-------------------------------------------------------------------------+ 
+     |                          TIMING CHECK SUMMARY                           | 
+     |-------------------------------------------------------------------------| 
+     |     Warning     |            Warning Description             |  Number  | 
+     |                 |                                            |    of    | 
+     |                 |                                            | Warnings | 
+     |-----------------+--------------------------------------------+----------| 
+     | uncons_endpoint | Unconstrained signal arriving at end point |        0 | 
+     +-------------------------------------------------------------------------+ 
+<CMD> checkDesign -timingLibrary
+Design check done.
+Report saved in file checkDesign/a23_core.main.htm.ascii.
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> checkDesign -physicalLibrary
+**WARN: (IMPREPO-205):	There are 2 Cells with missing PG PIN.
+**WARN: (IMPREPO-207):	There are 1 Cells dimensions not multiple integer of site.
+Design check done.
+Report saved in file checkDesign/a23_core.main.htm.ascii.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPREPO-205          1  There are %d Cells with missing PG PIN.  
+WARNING   IMPREPO-207          1  There are %d Cells dimensions not multip...
+*** Message Summary: 2 warning(s), 0 error(s)
+
+<CMD> setFPlanMode -snapCoreGrid manufacturing
+<CMD> setFPlanMode -snapDieGrid manufacturing
+<CMD> floorPlan -site CoreSite -r 2 0.50 2.0 2.0 2.0 2.0
+Adjusting Core to Bottom to: 2.0900.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> getIoFlowFlag
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site CoreSite -b 0.0 0.0 348.615 491.44 0.0 0.0 348.615 491.44 2.0 2.09 346.615 489.44
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> resizeFloorplan -ySize -70
+resizeFP value y after snapping -69.920
+**WARN: (IMPFP-317):	After shiftBased resize, ROUTED pre-routed wires will be removed and FIXED pre-routed wires will be retained.
+After resizeFP, 14.3470% core area reduced
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site CoreSite -r 1 0.50 2.0 2.0 2.0 2.0
+Adjusting Core to Bottom to: 2.0900.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> setDrawView fplan
+<CMD> uiSetTool select
+<CMD> selectInst u_execute
+<CMD> uiSetTool moveWire
+<CMD> set layerNameNoAbbreviation 0
+<CMD> set layerNameNoAbbreviation 1
+<CMD> deselectAll
+<CMD> selectInst u_execute
+<CMD> uiSetTool move
+<CMD> setObjFPlanBox Instance u_execute 144.1265 8.9145 342.1515 204.5245
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> deselectAll
+<CMD> selectInst u_decode
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> setObjFPlanBox Instance u_decode 12.019 11.886 127.224 127.126
+<CMD> deselectAll
+<CMD> selectInst u_fetch
+<CMD> setObjFPlanBox Instance u_fetch 38.095 235.491 95.84 292.591
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> deselectAll
+<CMD> selectInst u_coprocessor
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> setObjFPlanBox Instance u_coprocessor 35.8505 147.832 97.7605 208.352
+<CMD> addHaloToBlock 3 3 3 3 u_fetch
+<CMD> addHaloToBlock 3 3 3 3 u_decode
+<CMD> addHaloToBlock 3 3 3 3 u_execute
+<CMD> addHaloToBlock 3 3 3 3 u_coprocessor
+<CMD> fit
+<CMD> uiSetTool move
+<CMD> setObjFPlanBox Instance u_coprocessor 26.9355 144.1155 88.8455 204.6355
+<CMD> deselectAll
+<CMD> selectInst u_fetch
+<CMD> setObjFPlanBox Instance u_fetch 21.752 229.547 79.497 286.647
+<CMD> deselectAll
+<CMD> selectInst u_execute
+<CMD> setObjFPlanBox Instance u_execute 141.1535 22.287 339.1785 217.897
+<CMD> setObjFPlanBox Instance u_execute 144.1265 14.8565 342.1515 210.4665
+<CMD> setObjFPlanBox Instance u_execute 141.8965 11.8835 339.9215 207.4935
+<CMD> setEndCapMode -rightEdge FILL1LVT -leftEdge FILL1LVT
+<CMD> addEndCap
+Estimated cell power/ground rail width = 0.213 um
+Minimum row-size in sites for endcap insertion = 3.
+Minimum number of sites for row blockage       = 1.
+Inserted 470 pre-endcap <FILL1LVT> cells (prefix ENDCAP).
+Inserted 470 post-endcap <FILL1LVT> cells (prefix ENDCAP).
+For 940 new insts, *** Applied 0 GNC rules (cpu = 0:00:00.0)
+<CMD> addWellTap -cell FILL1LVT -cellInterval 20 -prefix WELLTAP
+For 1959 new insts, *** Applied 0 GNC rules (cpu = 0:00:00.0)
+Inserted 1959 well-taps <FILL1LVT> cells (prefix WELLTAP).
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 0.2 -pin {i_clk i_firq i_irq i_wb_ack {i_wb_dat[0]} {i_wb_dat[1]} {i_wb_dat[2]} {i_wb_dat[3]} {i_wb_dat[4]} {i_wb_dat[5]} {i_wb_dat[6]} {i_wb_dat[7]} {i_wb_dat[8]} {i_wb_dat[9]} {i_wb_dat[10]} {i_wb_dat[11]} {i_wb_dat[12]} {i_wb_dat[13]} {i_wb_dat[14]} {i_wb_dat[15]} {i_wb_dat[16]} {i_wb_dat[17]} {i_wb_dat[18]} {i_wb_dat[19]} {i_wb_dat[20]} {i_wb_dat[21]} {i_wb_dat[22]} {i_wb_dat[23]} {i_wb_dat[24]} {i_wb_dat[25]} {i_wb_dat[26]} {i_wb_dat[27]} {i_wb_dat[28]} {i_wb_dat[29]} {i_wb_dat[30]} {i_wb_dat[31]} {o_wb_adr[0]} {o_wb_adr[1]} {o_wb_adr[2]} {o_wb_adr[3]} {o_wb_adr[4]} {o_wb_adr[5]} {o_wb_adr[6]} {o_wb_adr[7]} {o_wb_adr[8]} {o_wb_adr[9]} {o_wb_adr[10]} {o_wb_adr[11]} {o_wb_adr[12]} {o_wb_adr[13]} {o_wb_adr[14]} {o_wb_adr[15]} {o_wb_adr[16]} {o_wb_adr[17]} {o_wb_adr[18]} {o_wb_adr[19]} {o_wb_adr[20]} {o_wb_adr[21]} {o_wb_adr[22]} {o_wb_adr[23]} {o_wb_adr[24]} {o_wb_adr[25]} {o_wb_adr[26]} {o_wb_adr[27]} {o_wb_adr[28]} {o_wb_adr[29]} {o_wb_adr[30]} {o_wb_adr[31]}}
+Successfully spread [68] pins.
+editPin : finished (cpu = 0:00:01.4 real = 0:00:02.0, mem = 1469.9M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixOverlap 1 -unit TRACK -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 3.0 -pin {o_wb_cyc {o_wb_dat[0]} {o_wb_dat[1]} {o_wb_dat[2]} {o_wb_dat[3]} {o_wb_dat[4]} {o_wb_dat[5]} {o_wb_dat[6]} {o_wb_dat[7]} {o_wb_dat[8]} {o_wb_dat[9]} {o_wb_dat[10]} {o_wb_dat[11]} {o_wb_dat[12]} {o_wb_dat[13]} {o_wb_dat[14]} {o_wb_dat[15]} {o_wb_dat[16]} {o_wb_dat[17]} {o_wb_dat[18]} {o_wb_dat[19]} {o_wb_dat[20]} {o_wb_dat[21]} {o_wb_dat[22]} {o_wb_dat[23]} {o_wb_dat[24]} {o_wb_dat[25]} {o_wb_dat[26]} {o_wb_dat[27]} {o_wb_dat[28]} {o_wb_dat[29]} {o_wb_dat[30]} {o_wb_dat[31]} {o_wb_sel[0]} {o_wb_sel[1]} {o_wb_sel[2]} {o_wb_sel[3]} o_wb_stb o_wb_we}
+Successfully spread [39] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1470.9M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> fit
+<CMD> addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 3 -spacing 1 -set_to_set_distance 20 -start_from left -extend_to design_boundary
+#% Begin addStripe (date=02/13 03:46:45, mem=1236.8M)
+
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 35 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal10|       35       |       NA       |
++--------+----------------+----------------+
+#% End addStripe (date=02/13 03:46:45, total cpu=0:00:00.1, real=0:00:00.0, peak res=1239.6M, current mem=1239.6M)
+<CMD> addStripe -nets {VDD VSS} -layer Metal9 -direction horizontal -width 3 -spacing 1 -set_to_set_distance 12 -start_from bottom -extend_to design_boundary
+#% Begin addStripe (date=02/13 03:46:57, mem=1239.6M)
+
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -trim_antenna_max_distance  0.00
+Stripe generation is complete.
+vias are now being generated.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {23.5000, 231.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {43.5000, 231.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {63.5000, 231.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {23.5000, 243.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {43.5000, 243.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {63.5000, 243.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {23.5000, 255.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {43.5000, 255.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {63.5000, 255.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {23.5000, 267.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {43.5000, 267.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {63.5000, 267.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {23.5000, 279.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {43.5000, 279.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {63.5000, 279.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {27.5000, 235.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {47.5000, 235.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {67.5000, 235.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {27.5000, 247.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (IMPPP-4500):	Large amount of geometries exist around {47.5000, 247.5900} between Layer Metal9 and Metal10. Long running time might be introduced.
+**WARN: (EMS-27):	Message (IMPPP-4500) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+addStripe created 58 wires.
+ViaGen created 1015 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal9 |       58       |       NA       |
+|  Via9  |      1015      |        0       |
++--------+----------------+----------------+
+#% End addStripe (date=02/13 03:46:57, total cpu=0:00:00.2, real=0:00:00.0, peak res=1240.1M, current mem=1240.1M)
+child process exited abnormally
+
+*** Memory Usage v#1 (Current mem = 1472.863M, initial mem = 228.730M) ***
+*** Message Summary: 1398 warning(s), 4 error(s)
+
+--- Ending "Innovus" (totcpu=0:02:29, real=0:21:57, mem=1472.9M) ---
